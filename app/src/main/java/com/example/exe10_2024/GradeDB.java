@@ -7,8 +7,6 @@ package com.example.exe10_2024;
  */
 public class GradeDB {
     public static final String TABLE_GRADES = "grades";
-    public static final String ID = "id";
-    public static final String NAME = "name";
     public static final String SUBJECT = "subject";
     public static final String TYPE = "type";
     public static final String GRADE = "grade";

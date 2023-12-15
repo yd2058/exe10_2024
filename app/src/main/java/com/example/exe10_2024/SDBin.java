@@ -9,17 +9,23 @@ package com.example.exe10_2024;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 public class SDBin extends AppCompatActivity implements View.OnCreateContextMenuListener {
-
+    SQLiteDatabase db;
+    HelperDB hlp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sdbin);
+        hlp = new HelperDB(this);
+        db = hlp.getWritableDatabase();
+        db.close();
+
     }
 
     @Override
