@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/btni"
+        android:id="@+id/sibt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Main" />
+        android:title="Student Input" />
     <item
-        android:id="@+id/btns"
+        android:id="@+id/sdbt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Credits" />
+        android:title="Students Display" />
     <item
-        android:id="@+id/btng"
+        android:id="@+id/gdbt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Credits" />
+        android:title="Grades Display" />
     <item
-        android:id="@+id/btnc"
+        android:id="@+id/cbt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Credits" />

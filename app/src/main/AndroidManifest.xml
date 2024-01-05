@@ -13,6 +13,18 @@
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".GDBin"
+            android:exported="false" />
+        <activity
+            android:name=".GDBD"
+            android:exported="false" />
+        <activity
+            android:name=".Stinfo"
+            android:exported="false" />
+        <activity
+            android:name=".SDBD"
+            android:exported="false" />
+        <activity
             android:name=".credits"
             android:exported="false" />
         <activity

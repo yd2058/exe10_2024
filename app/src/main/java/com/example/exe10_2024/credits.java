@@ -41,8 +41,20 @@ public class credits extends AppCompatActivity implements View.OnCreateContextMe
      */
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.btni) {
-            finish();
+        if(id == R.id.cbt){
+
+        }
+        else if (id ==R.id.sdbt) {
+            Intent si = new Intent(this, SDBD.class);
+            startActivity(si);
+        }
+        else if (id ==R.id.gdbt) {
+            Intent si = new Intent(this, GDBD.class);
+            startActivity(si);
+        }
+        else if (id ==R.id.sibt) {
+            Intent si = new Intent(this, SDBin.class);
+            startActivity(si);
         }
         return true;
     }

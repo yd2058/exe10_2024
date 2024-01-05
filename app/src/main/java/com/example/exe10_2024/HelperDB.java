@@ -1,7 +1,10 @@
 package com.example.exe10_2024;
 
+import static com.example.exe10_2024.GradeDB.ACTIVEST;
 import static com.example.exe10_2024.GradeDB.GRADE;
 import static com.example.exe10_2024.GradeDB.QUARTER;
+import static com.example.exe10_2024.GradeDB.STUDENT_ID;
+import static com.example.exe10_2024.GradeDB.STUDENT_NAME;
 import static com.example.exe10_2024.GradeDB.SUBJECT;
 import static com.example.exe10_2024.GradeDB.TABLE_GRADES;
 import static com.example.exe10_2024.GradeDB.TYPE;
@@ -21,7 +24,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
 
 public class HelperDB extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "stgrdb.db";
@@ -34,7 +36,8 @@ public class HelperDB extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         strCreate="CREATE TABLE "+TABLE_STUDENTS;
-        strCreate+=" ("+ID+" INTEGER PRIMARY KEY,";
+        strCreate+=" ("+StudentDB.KEY_ID+" INTEGER PRIMARY KEY,";
+        strCreate+=" "+ID+" TEXT,";
         strCreate+=" "+NAME+" TEXT,";
         strCreate+=" "+ACTIVE+" INTEGER,";
         strCreate+=" "+ADDRESS+" TEXT,";
@@ -43,17 +46,19 @@ public class HelperDB extends SQLiteOpenHelper {
         strCreate+=" "+DAD_NAME+" TEXT,";
         strCreate+=" "+DAD_PHONE+" TEXT,";
         strCreate+=" "+MOM_NAME+" TEXT,";
-        strCreate+=" "+MOM_PHONE+" TEXT,";
+        strCreate+=" "+MOM_PHONE+" TEXT";
         strCreate+=");";
         db.execSQL(strCreate);
 
         strCreate="CREATE TABLE "+TABLE_GRADES;
-        strCreate+=" ("+ID+" INTEGER PRIMARY KEY,";
-        strCreate+=" "+NAME+" TEXT,";
+        strCreate+=" ("+GradeDB.KEY_ID+" INTEGER PRIMARY KEY,";
+        strCreate+=" "+ACTIVEST+" INTEGER,";
+        strCreate+=" "+STUDENT_ID+" TEXT,";
+        strCreate+=" "+STUDENT_NAME+" TEXT,";
         strCreate+=" "+SUBJECT+" TEXT,";
         strCreate+=" "+TYPE+" TEXT,";
         strCreate+=" "+GRADE+" INTEGER,";
-        strCreate+=" "+QUARTER+" INTEGER,";
+        strCreate+=" "+QUARTER+" INTEGER";
         strCreate+=");";
         db.execSQL(strCreate);
 
