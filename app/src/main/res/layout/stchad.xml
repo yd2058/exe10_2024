@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7" />
+
+    <LinearLayout
+        android:id="@+id/adsbgr"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/adetpn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="Full Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/adetpp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Phone Number"
+            android:inputType="phone" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adttqa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/adetdn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Dad Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/adetdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Dad Phone Number"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adllm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/adetmn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Mom Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/adetmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Mom Phone Number"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adllh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/adetha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Home Address"
+            android:inputType="textPostalAddress" />
+
+        <EditText
+            android:id="@+id/adethp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Home Phone Number"
+            android:inputType="phone" />
+    </LinearLayout>
+</LinearLayout>
