@@ -31,6 +31,12 @@ public class SDBin extends AppCompatActivity implements View.OnCreateContextMenu
         initAll();
 
     }
+    /**
+     * This function initiates all display components to connect them to java file.
+     * <p>
+     *
+     *
+     */
 
     private void initAll() {
         hlp = new HelperDB(this);
@@ -77,6 +83,12 @@ public class SDBin extends AppCompatActivity implements View.OnCreateContextMenu
         }
         return true;
     }
+    /**
+     * this function saves to student database a new record.
+     * <p>
+     *
+     * @param	view Description	refers to current activity xml file.
+     */
 
     public void srecsave(View view) {
         if(takin()) {
@@ -113,6 +125,12 @@ public class SDBin extends AppCompatActivity implements View.OnCreateContextMenu
         }
         else Toast.makeText(this, "you are missing some data", Toast.LENGTH_LONG).show();
     }
+    /**
+     * this function returns if all necessary data inputs have been filled.
+     * <p>
+     *
+     */
+
     public boolean takin(){
         return(!(etid.getText().toString().equals(""))&&
                 !(etpn.getText().toString().equals(""))&&

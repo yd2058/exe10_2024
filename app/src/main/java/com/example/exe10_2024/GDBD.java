@@ -1,5 +1,10 @@
 package com.example.exe10_2024;
-
+/**
+ * @author		Yiftah David yd2058@bs.amalnet.k12.il
+ * @version	    1.1
+ * @since		13/12/2023
+ * This is a grades display screen
+ */
 import static com.example.exe10_2024.GradeDB.KEY_ID;
 import static com.example.exe10_2024.GradeDB.STUDENT_ID;
 import static com.example.exe10_2024.GradeDB.TABLE_GRADES;
@@ -57,6 +62,12 @@ public class GDBD extends AppCompatActivity implements View.OnCreateContextMenuL
         super.onResume();
         updatelst();
     }
+    /**
+     * updates grades listview on screen according to filter/sort.
+     * <p>
+     *
+     *
+     */
 
     private void updatelst() {
         db = hlp.getWritableDatabase();
@@ -152,11 +163,15 @@ public class GDBD extends AppCompatActivity implements View.OnCreateContextMenuL
 
 
     /**
-     * @param parent
-     * @param view
-     * @param pos
-     * @param rowid
+     * updates filter/sort type.
+     * <p>
+     *
+     * @param	parent refers to adapter in use.
+     * @param view refers to current activity.
+     * @param pos  refers to cell in array selected.
+     * @param rowid refers to id of row selected
      */
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long rowid) {
         fil = pos;
@@ -172,11 +187,15 @@ public class GDBD extends AppCompatActivity implements View.OnCreateContextMenuL
     }
 
     /**
-     * @param adapterView
-     * @param view
-     * @param pos
-     * @param l
+     * recats to grade listview select and summons an alert dialog to edit/delete record.
+     * <p>
+     *
+     * @param	adapterView refers to adapter in use.
+     * @param view refers to current activity
+     * @param pos refers to cell in array selected
+     * @param l refers to id of the row selected
      */
+
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
         LinearLayout grchad = (LinearLayout) getLayoutInflater().inflate(R.layout.grchad, null);
@@ -194,6 +213,13 @@ public class GDBD extends AppCompatActivity implements View.OnCreateContextMenuL
         adb.setNegativeButton("Delete\nRecord", geditt);
         adb.show();
     }
+
+    /**
+     * alert dialog  on click listener to react to the positive, negative and neutral buttons accordingly.
+     * <p>
+     *
+     */
+
     DialogInterface.OnClickListener geditt = new DialogInterface.OnClickListener() {
         @Override
         public void onClick(DialogInterface dialog, int which) {
@@ -222,6 +248,12 @@ public class GDBD extends AppCompatActivity implements View.OnCreateContextMenuL
             }
         }
     };
+
+    /**
+     * opens activity for grade inputing.
+     * <p>
+     *
+     */
 
     public void addg(View view) {
         Intent si = new Intent(this, GDBin.class);

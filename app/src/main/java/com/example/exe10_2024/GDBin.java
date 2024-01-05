@@ -1,5 +1,10 @@
 package com.example.exe10_2024;
-
+/**
+ * @author		Yiftah David yd2058@bs.amalnet.k12.il
+ * @version	    1.2
+ * @since		4/1/2024
+ * this is a grades input screen
+ */
 import static com.example.exe10_2024.GradeDB.STUDENT_ID;
 import static com.example.exe10_2024.GradeDB.TABLE_GRADES;
 
@@ -44,6 +49,11 @@ public class GDBin extends AppCompatActivity implements View.OnCreateContextMenu
         super.onResume();
         initiall();
     }
+    /**
+     * Initiates all necessary view components.
+     * <p>
+     *
+     */
 
     private void initiall() {
         hlp = new HelperDB(this);
@@ -112,6 +122,12 @@ public class GDBin extends AppCompatActivity implements View.OnCreateContextMenu
         return true;
     }
 
+    /**
+     * adds record to grades database.
+     * <p>
+     *
+     * @param	view Description refers to current activity.
+     */
 
     public void addgr(View view) {
         if(curst>=0&&(!adetsb.getText().toString().equals(""))&&(!adetgr.getText().toString().equals(""))&&(!adettt.getText().toString().equals(""))&&(!adetcq.getText().toString().equals(""))){
@@ -133,10 +149,13 @@ public class GDBin extends AppCompatActivity implements View.OnCreateContextMenu
     }
 
     /**
-     * @param adapterView
-     * @param view
-     * @param i
-     * @param l
+     * updates indidcator of current selected student.
+     * <p>
+     *
+     * @param adapterView refers to adapter in use.
+     * @param view refers to current activity.
+     * @param i refers to position in array selected.
+     * @param l refers to spinner row id.
      */
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

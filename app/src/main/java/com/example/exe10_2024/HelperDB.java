@@ -1,5 +1,10 @@
 package com.example.exe10_2024;
-
+/**
+ * @author		Yiftah David yd2058@bs.amalnet.k12.il
+ * @version	    1.1
+ * @since		13/12/2023
+ * this activity manages all writes and read to the database
+ */
 import static com.example.exe10_2024.GradeDB.ACTIVEST;
 import static com.example.exe10_2024.GradeDB.GRADE;
 import static com.example.exe10_2024.GradeDB.QUARTER;

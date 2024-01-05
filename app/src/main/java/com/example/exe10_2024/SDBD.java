@@ -1,5 +1,10 @@
 package com.example.exe10_2024;
-
+/**
+ * @author		Yiftah David yd2058@bs.amalnet.k12.il
+ * @version	    1.1
+ * @since		13/12/2023
+ * this is a students display screen
+ */
 import static com.example.exe10_2024.StudentDB.ID;
 import static com.example.exe10_2024.StudentDB.NAME;
 import static com.example.exe10_2024.StudentDB.TABLE_STUDENTS;
@@ -42,6 +47,12 @@ public class SDBD extends AppCompatActivity implements View.OnCreateContextMenuL
         super.onResume();
         stupdate();
     }
+    /**
+     * Updates the student summary listview to all active students.
+     * <p>
+     *
+     *
+     */
 
     private void stupdate() {
         students = new ArrayList<>();
@@ -71,6 +82,12 @@ public class SDBD extends AppCompatActivity implements View.OnCreateContextMenuL
         slst.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         slst.setOnItemClickListener(this);
     }
+    /**
+     * initiates all necessary display parts and connects them for use.
+     * <p>
+     *
+     *
+     */
 
     private void initiall() {
         slst = findViewById(R.id.slst);
@@ -117,6 +134,15 @@ public class SDBD extends AppCompatActivity implements View.OnCreateContextMenuL
         }
         return true;
     }
+    /**
+     * Reacts to selection of student and sends to full view of student record.
+     * <p>
+     *
+     * @param adapterView refers to adapter used for the click.
+     * @param view refers to current activity.
+     * @param pos refers to position in array selected.
+     * @param id refers to line id of listview.
+     */
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {

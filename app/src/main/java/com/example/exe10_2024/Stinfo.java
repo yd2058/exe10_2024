@@ -1,5 +1,10 @@
 package com.example.exe10_2024;
-
+/**
+ * @author		Yiftah David yd2058@bs.amalnet.k12.il
+ * @version	    1.1
+ * @since		13/12/2023
+ * this activity shows all data for student picked in sdbd
+ */
 import static com.example.exe10_2024.GradeDB.KEY_ID;
 import static com.example.exe10_2024.GradeDB.STUDENT_ID;
 import static com.example.exe10_2024.GradeDB.TABLE_GRADES;
@@ -51,6 +56,11 @@ public class Stinfo extends AppCompatActivity implements View.OnCreateContextMen
         initiall();
 
     }
+    /**
+     * initiates all necessary view components.
+     * <p>
+     *
+     */
 
     private void initiall() {
         tvpn = findViewById(R.id.tvpn);
@@ -71,6 +81,11 @@ public class Stinfo extends AppCompatActivity implements View.OnCreateContextMen
         updatest();
         updategd();
     }
+    /**
+     * Updates grades listview in activity.
+     * <p>
+     *
+     */
 
     private void updategd() {
 
@@ -98,6 +113,11 @@ public class Stinfo extends AppCompatActivity implements View.OnCreateContextMen
         adp = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, grades);
         glst.setAdapter(adp);
     }
+    /**
+     * updates student information.
+     * <p>
+     *
+     */
 
     private void updatest(){
 
@@ -171,6 +191,12 @@ public class Stinfo extends AppCompatActivity implements View.OnCreateContextMen
         }
         return true;
     }
+    /**
+     * summons alert dialog to change student data.
+     * <p>
+     *
+     * @param	view Description	text text text.
+     */
 
     public void change(View view) {
         stchad = (LinearLayout) getLayoutInflater().inflate(R.layout.stchad, null);
@@ -192,6 +218,12 @@ public class Stinfo extends AppCompatActivity implements View.OnCreateContextMen
         adb.setNegativeButton("Delete\nRecord", click);
         adb.show();
     }
+    /**
+     * alert dialog  on click listener to react to the positive, negative and neutral buttons accordingly.
+     * <p>
+     *
+     */
+
     DialogInterface.OnClickListener click = new DialogInterface.OnClickListener() {
         @Override
         public void onClick(DialogInterface dialog, int which) {
@@ -226,6 +258,12 @@ public class Stinfo extends AppCompatActivity implements View.OnCreateContextMen
             }
         }
     };
+    /**
+     * summons alert dialog to add grade record for this student.
+     * <p>
+     *
+     * @param	view Description	refers to current activity.
+     */
 
     public void add(View view) {
             grchad = (LinearLayout)getLayoutInflater().inflate(R.layout.grchad,null);
@@ -243,6 +281,11 @@ public class Stinfo extends AppCompatActivity implements View.OnCreateContextMen
 
 
     }
+    /**
+     * alert dialog  on click listener to react to the positive and neutral buttons accordingly.
+     * <p>
+     *
+     */
 
     DialogInterface.OnClickListener gadd = new DialogInterface.OnClickListener() {
         @Override
@@ -270,6 +313,15 @@ public class Stinfo extends AppCompatActivity implements View.OnCreateContextMen
         }
     };
 
+    /**
+     * reacts to grade selection from listview.
+     * <p>
+     *
+     * @param	adapterView refers to adapter in use.
+     * @param view  refers to current activity.
+     * @param pos refers to position in array of selected grade
+     * @param l refers to line id of selected line in spinner
+     */
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
@@ -288,6 +340,11 @@ public class Stinfo extends AppCompatActivity implements View.OnCreateContextMen
         adb.setNegativeButton("Delete\nRecord", gedit);
         adb.show();
     }
+    /**
+     * alert dialog  on click listener to react to the positive, negative and neutral buttons accordingly.
+     * <p>
+     *
+     */
 
     DialogInterface.OnClickListener gedit = new DialogInterface.OnClickListener() {
         @Override
