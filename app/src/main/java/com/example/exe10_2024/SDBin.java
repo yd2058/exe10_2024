@@ -122,6 +122,15 @@ public class SDBin extends AppCompatActivity implements View.OnCreateContextMenu
             db.insert(StudentDB.TABLE_STUDENTS, null, cv);
             db.close();
             Toast.makeText(this, "record saved", Toast.LENGTH_LONG).show();
+            etid.setText("");
+            etpn.setText("");
+            etpp.setText("");
+            etdn.setText("");
+            etdp.setText("");
+            etmn.setText("");
+            etmp.setText("");
+            etha.setText("");
+            ethp.setText("");
         }
         else Toast.makeText(this, "you are missing some data", Toast.LENGTH_LONG).show();
     }
