@@ -24,6 +24,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -92,6 +93,7 @@ public class SDBD extends AppCompatActivity implements View.OnCreateContextMenuL
     private void initiall() {
         slst = findViewById(R.id.slst);
         stupdate();
+        Toast.makeText(this, "Click A Student For More Info", Toast.LENGTH_SHORT).show();
 
     }
 
